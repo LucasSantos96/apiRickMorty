@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Rick and Morty</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <img src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/ab553cdc-e15d-4597-b65f-bec9201fd2dd/63cf6c90-3837-11f0-8dd2-0affeb02d451?host=wbd-images.prod-vod.h264.io&partner=beamcom&w=4320" alt="Logo" class="logo">
+
+
+    <section>
+        <form>
+            <label for="numPerson">Digite um número para ver o personagem</label>
+            <input type="number" name="numPerson" id="numPerson" autofocus>
+            <button type="submit" id="btn">Ver personagem</button>
+        </form>
+
+        <div id="contentPerson" class="">
+            <img src="" alt="Image Person" id="imgPerson">
+           <div class="containerPerson">
+               <div class="flex">
+                   <p >Id:</p>
+                    <pre id="idPerson"></pre>
+               </div>
+               <div class="flex">
+                <p>Nome:</p>
+                   <pre id="namePerson"></pre>
+               </div>
+                  <div class="flex">
+                    <p>Gênero:</p>
+                      <pre id="gender"></pre>
+                  </div>
+                <div class="flex">
+                    <p>Status:</p>
+                    <pre id="status"></pre>
+                </div>
+                <div class="flex">
+                    <p>Espécie:</p>
+                    <pre id="species"></pre>
+                </div>
+                <div class="flex">
+                    <p>Terra:</p>
+                    <pre id="earth"></pre>
+                </div>
+                <div class="flex">
+                    <p>Ultima localização:</p>
+                    <pre id="location"></pre>
+                </div>
+           </div>
+
+        
+        </div>
+
+    </section>
+
+
+    <script src="script/index.js"></script>
+    
+</body>
+</html>
