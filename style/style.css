@@ -15,17 +15,24 @@ body {
   background-repeat: repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 40px 20px; /* Padding para mobile */
 }
 .logo {
-  width: 700px;
-  margin-top: 50px;
+  width: 90%; /* Largura relativa para mobile */
+  max-width: 350px; /* Largura máxima para não ficar gigante */
 }
 form {
   margin-top: 20px;
-  margin-bottom: 8%;
+  margin-bottom: 40px;
   color: #fff;
-  font-size: 40px;
+  font-size: 22px; /* Fonte menor para mobile */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column; /* Itens em coluna no mobile */
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 input {
   border: none;
@@ -33,6 +40,8 @@ input {
   border-radius: 10px;
   background-color: #ffffff93;
   outline: none;
+  width: 100%; /* Ocupa toda a largura do form */
+  text-align: center;
 }
 #btn {
   border: none;
@@ -43,6 +52,7 @@ input {
   font-size: medium;
   cursor: pointer;
   transition: transform 0.3s ease;
+  animation: pulse 1.5s infinite;
 }
 #btn:hover {
   background-color: #058a9cc1;
@@ -55,24 +65,24 @@ input {
   display: flex;
   flex-direction: column;
   background-color: #9ad6d767;
-  padding:40px 80px;
+  padding: 20px; /* Padding menor para mobile */
   border-radius: 12px;
-  margin-top: 80px;
   box-shadow: 2px 0px 37px 24px rgba(154, 214, 215, 0.464);
   margin-bottom: 40px;
   align-items: center;
   justify-items: center;
-  width: fit-content;
+  width: 90%; /* Largura relativa para mobile */
+  max-width: 450px;
   margin: 0 auto;
 }
 
 .flex {
   display: flex;
   background-color: #ffffff;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 10px;
   gap: 8px;
-  width: fit-content;
+  width: 100%; /* Ocupa toda a largura do container */
   height: fit-content;
   align-items: center;
 }
@@ -90,5 +100,100 @@ input {
   gap: 14px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+}
+
+#alert_msg.dflex {
+  display: flex;
+}
+#alert_msg.dnone {
+  display: none;
+}
+
+#alert_msg {
+  background-color: #fff;
+  width: 90%; /* Largura relativa para mobile */
+  max-width: 400px;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0 auto;
+  font-size: 16px; /* Fonte menor para mobile */
+  color: #ce4a4a;
+  animation: pulse 1s infinite;
+  display: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(1, 176, 200, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(1, 176, 200, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(1, 176, 200, 0);
+  }
+}
+
+/* ============================================ */
+/*         VERSÃO TABLET E DESKTOP              */
+/* ============================================ */
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 80px 20px; /* Restaura padding vertical */
+  }
+
+  .logo {
+    width: 700px;
+    max-width: none;
+    margin-top: 50px;
+  }
+
+  form {
+    flex-direction: row; /* Formulário em linha novamente */
+    font-size: 40px;
+    width: auto;
+    max-width: none;
+    margin-bottom: 8%;
+    text-align: left;
+  }
+
+  input,
+  #btn {
+    width: auto; /* Largura automática para os inputs */
+    text-align: left;
+  }
+
+  #contentPerson.contentPersonBlock {
+    width: fit-content;
+    max-width: none;
+    padding: 40px 80px;
+    margin-top: 80px;
+  }
+
+  .flex {
+    width: fit-content;
+  }
+
+  #alert_msg {
+    width: fit-content;
+    max-width: none;
+    font-size: 24px;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #contentPerson.contentPersonBlock {
+    flex-direction: row; /* Coloca a imagem e os detalhes lado a lado */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 50px; /* Aumenta o espaço entre a imagem e o texto */
+  }
+
+  .containerPerson {
+    margin-top: 0; /* Remove a margem superior que não é mais necessária */
+  }
 }
