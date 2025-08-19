@@ -34,7 +34,7 @@ Como este é um projeto estático (apenas front-end), você não precisa de um s
 
 1.  **Clone o repositório** para a sua máquina local:
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone (https://github.com/LucasSantos96/apiRickMorty.git)
     ```
 2.  **Navegue até a pasta** do projeto:
     ```bash
@@ -65,3 +65,4 @@ Como este é um projeto estático (apenas front-end), você não precisa de um s
 ---
 
 Feito com ❤️ por um fã de Rick and Morty.
+
